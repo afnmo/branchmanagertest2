@@ -1,0 +1,212 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+/* Apply styles to the background image */
+.background-image {
+  background-image: url('../images/back4.PNG'); /* Use forward slashes and a relative path */
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* This ensures the content is displayed above the background */
+}
+
+
+
+  /*---------------------------footer-----------------------------------*/
+  .footer {
+    position: relative;
+    width: 100%;
+    background: #83c4a197;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .social-icon{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .social-icon__item{
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+ /*---------------------------footer-----------------------------------*/
+
+/*header*/
+:root,
+[data-bs-theme="light"] {
+  --bs-success: #53b799;
+  --bs-success-rgb: 83, 183, 153;
+  --bs-success-text-emphasis: #21493d;
+  --bs-success-bg-subtle: #ddf1eb;
+  --bs-success-border-subtle: #bae2d6;
+  --bs-body-bg: #ffffff;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-link-color: #dcfee3;
+  --bs-link-color-rgb: 220, 254, 227;
+}
+
+.pika-single {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: #83c4a197;
+  background: #83c4a197;
+  font-family: url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+}
+.pika-single:after,
+.pika-single:before {
+  content: " ";
+  display: table;
+}
+.pika-single:after {
+  clear: both;
+}
+.pika-single.is-hidden {
+  display: none;
+}
+.pika-single.is-bound {
+  position: absolute;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+.pika-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
+}
+.pika-title {
+  position: relative;
+  text-align: center;
+}
+.pika-label {
+  display: inline-block;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.pika-title select {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  opacity: 0;
+}
+.pika-next,
+.pika-prev {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: 0.5;
+}
+.pika-next:hover,
+.pika-prev:hover {
+  opacity: 1;
+}
+.is-rtl .pika-prev,
+.pika-next {
+  float: right;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=);
+}
+.pika-next.is-disabled,
+.pika-prev.is-disabled {
+  cursor: default;
+  opacity: 0.2;
+}
+.pika-select {
+  display: inline-block;
+}
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+.pika-table td,
+.pika-table th {
+  width: 14.285714285714286%;
+  padding: 0;
+}
+.pika-table th {
+  color: #999;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.pika-week {
+  font-size: 11px;
+  color: #999;
+}
+.is-today .pika-button {
+  color: #3af;
+  font-weight: 700;
+}
+.is-selection-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.pika-button:hover,
+.pika-row.pick-whole-week:hover .pika-button {
+  color: #fff;
+  background: #ff8000;
+  box-shadow: none;
+  border-radius: 3px;
+}
+.pika-table abbr {
+  border-bottom: none;
+  cursor: help;
+}
+.page-footer .links a {
+  font-size: 1.2rem;
+}
+
+.gradient {
+  background: linear-gradient(1deg, #83c4a197);
+}
