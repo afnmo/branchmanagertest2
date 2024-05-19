@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" href="../images/Logo.png">
+    <link rel="stylesheet" href="..\styles\registerFormBM.css">
+    <link rel="stylesheet" href="../styles/basic.css">
+    <title>Register New Employee</title>
+
+    <!-- Include the Firebase script -->
+    <script type="module" src="..\javaScript\registerFormEmployee.js"></script>
+    <script type="module" src="..\javaScript\logout.js"></script>
+    <script type="module" src="..\javaScript\addNotifications.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Include Bootstrap JS bundle (popper.js included) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="bg-gradient-primary" style="color: var(--bs-body-bg);background: rgba(255,255,255,0);">
+    <div class="background-image"></div>
+
+   <!-- start header -->
+   <header>
+    <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark" style="padding: 19px 20px; border-color: #83c4a197; background-color: #83c4a197; margin-bottom: 18px;">
+      <div style="display: flex; align-items: center;">
+        <img src="..\images\Logo.png" style="border-radius: 20px; border-color: #dcfee3; width: 80px; height: 80px; color: var(--bs-success-border-subtle); margin-right: 20px;" width="92" height="100" />
+        <span style="color: rgb(0, 0, 0); font-size: 32px;"></span>
+      </div>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav ms-auto" style="display: flex; list-style-type: none; padding: 0; align-items: center;">
+            <li class="nav-item">
+              <a class="nav-link" href="homepagePM.html">
+                <span>
+                  <span style="color: rgba(251,247,247,0.65); font-size: 20px; font-weight: bold;">Home</span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="edit.html">
+                <span>
+                  <span style="color: rgba(251,247,247,0.65); font-size: 20px; font-weight: bold;">Edit Station</span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bill.html">
+                <span>
+                    <span style="color: rgba(251,247,247,0.65); font-size: 20px; font-weight: bold;">Bills</span>
+                </span>
+            </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span>
+                  <span style="color: rgb(255, 255, 255); font-size: 20px; font-weight: bold;">Employee</span>
+                </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="myEmployee.html">My Employee</a>
+                <a class="dropdown-item" href="registerFormEmployee.html">Add New Employee</a>
+                <a class="dropdown-item" href="updateEmployeePage.html">Upadate My Employee</a>
+
+
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="promotions.html">
+                <span>
+                  <span style="color: rgba(251, 247, 247, 0.65); font-size: 20px; font-weight: bold;">Promotions</span>
+                </span>
+              </a>
+            </li>
+         
+            <li class="nav-item">
+              <a class="notification-icon new-notifications" href="notification.html" style=" position: relative;">
+                <span>
+                  <i class="fas fa-bell" style="color: rgba(251, 247, 247, 0.65); font-size: 20px; font-weight: bold;"></i>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a id="signOutLink" class="nav-link" href="#">
+                <span>
+                  <span style="color: rgba(255, 0, 0, 0.65); font-size: 20px; font-weight: bold;">Log
+                    out</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+    <!-- end header -->
+
+    <main class="page lanidng-page">
+        <section class="position-relative py-4 py-xl-5" style="margin-top: 150px">
+            <!-- start form -->
+            <div class="container" style="background: rgba(255,255,255,0);">
+                <div class="card shadow-lg o-hidden border-0 my-5" style="border-radius: 30px;">
+                    <div class="card-body p-0" style="border-radius: 0px;">
+                        <div class="row">
+                            <div class="col-lg-5 d-none d-lg-flex">
+                                <img src="..\images\employee.png" width="441" height="500">
+                            </div>
+                            <div class="col-lg-7" style="border-radius: 0px;">
+                                <div class="p-5" style="border-style: none;border-radius: 0px;">
+                                    <div class="text-center">
+                                        <h3 class="text-uppercase fw-semibold text-dark mb-4"
+                                            style="font-family: Roboto, sans-serif;font-weight: bold;">
+                                            <span style="color: rgb(146, 141, 133);">Add New Employee</span>
+                                        </h3>
+                                    </div>
+
+                                    <form class="user" id="registrationForm2" autocomplete="off">
+                                        <div class="row mb-3">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input class="form-control form-control-user" type="text" id="FirstName" 
+                                                    placeholder="First Name" name="first_name_employee"
+                                                    required pattern="^[^0-9].*" style="font-size: 16px;" autocorrect="off" autocapitalize="none">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input class="form-control form-control-user" type="text" id="LastName" 
+                                                    placeholder="Last Name" name="last_name_employee" pattern="^[^0-9].*"
+                                                    required style="font-size: 16px;" autocorrect="off" autocapitalize="none">
+                                            </div></div>
+                                            <div class="row mb-3">
+                                                <div class="col-sm-6">
+                                                    <input class="form-control form-control-user" type="text" id="phone" 
+                                                        placeholder="phone" name="phone" 
+                                                        required style="font-size: 16px;" autocorrect="off" autocapitalize="none"
+                                                        >
+                                                
+                                                </div>
+                                         
+                                                <div class="col-sm-6">
+                                                  <input class="form-control form-control-user" type="number" id="years_experience" 
+                                                      placeholder="Years of experience" name="years_experience" 
+                                                      required style="font-size: 16px;" autocorrect="off" autocapitalize="none" min="0">
+                                              </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input class="form-control form-control-user" type="email" id="email" 
+                                                    aria-describedby="emailHelp" placeholder="Email Address" name="email_employee"
+                                                    required style="font-size: 16px;" autocorrect="off" autocapitalize="none">
+                                            </div>
+                                            <!-- <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input class="form-control form-control-user" type="password" id="password" autocomplete="off"
+                                                    aria-describedby="emailHelp" placeholder="Password" name="Password_employee"
+                                                    required style="font-size: 16px;">
+                                                <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                                                <label for="showPassword">Show Password</label>
+                                            </div> -->
+                                        </div>
+                                       
+                                    
+                                        <!-- Error message -->
+                                        <div id="errorMessage" style="color: red; margin-bottom: 6px;"></div>
+                                    
+                                        <!-- Success message -->
+                                        <div id="successMessage" style="display:none; color:green; margin-bottom: 13px;">Employee added successfully! Please wait to proceed.</div>
+                                         <!-- Please wait message -->
+                                       <div id="pleaseWaitMessage" style="display: none;">Please wait, checking input...</div>
+                                        <div>
+                                          <button id="cancel" class="btn btn-primary d-inline-block btn-user" type="button"
+                                              style="border-radius: 160px; background: rgba(174, 177, 176, 0.52); border-color: rgba(174, 177, 176, 0.52); font-weight: bold; margin-right: 10px; width: 30%; color: white; text-decoration: none;">
+                                              Cancel
+                                          </button>
+                                          <button id="updateButton" class="btn btn-primary d-inline-block btn-user" type="submit"
+                                              style="border-radius: 160px; background: rgba(48,180,118,0.52); border-color: rgba(48,180,118,0.52); font-weight: bold; margin-left: 10px; width: 65%; color: white; text-decoration: none;">
+                                              Add Employee
+                                          </button>
+                                      </div>
+                                      
+                                      
+                                    </form>
+                                                         
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end form -->
+        </section>
+    </main>
+    <!-- start footer -->
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+
+        <p>&copy;2023 All Rights Reserved For 91.com</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- end footer -->
+
+
+</body>
+
+</html>
