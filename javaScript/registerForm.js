@@ -70,7 +70,7 @@ try {
     console.log("sessionID" + sessionID);
     console.log("sessionID" + SID);
     // Query for documents where branch_manager_id matches SID
-    const querySnapshot = await getDocs(query(stationRequestsRef, where('branch_manager_id', '==', sessionID)));
+    // const querySnapshot = await getDocs(query(stationRequestsRef, where('branch_manager_id', '==', sessionID)));
     const querySnapshot = await getDocs(query(stationRequestsRef, where('branch_manager_id', '==', SID)));
     // console.log(querySnapshot);
 
@@ -99,7 +99,7 @@ try {
 if (sessionID) {
 if (SID) {
     chechRejected();
-    const Sdoc = doc(db, "Branch_Manager", sessionID); // Update the document reference
+    // const Sdoc = doc(db, "Branch_Manager", sessionID); // Update the document reference
     const Sdoc = doc(db, "Branch_Manager", SID); // Update the document reference
     // Use await with getDoc since it returns a Promise
     const docSnap = await getDoc(Sdoc);
@@ -164,7 +164,7 @@ async function Addrequests() {
         const stationRequestID = stationRequestRef.id;
 
         // Define a reference to a specific document within the "Branch_Manager" collection
-        const branchManagerDocRef = doc(db, "Branch_Manager", sessionID);
+        // const branchManagerDocRef = doc(db, "Branch_Manager", sessionID);
         const branchManagerDocRef = doc(db, "Branch_Manager", SID);
 
         // Update the document with the new field
@@ -195,4 +195,5 @@ function validateURL(url) {
         urlInput.classList.remove('error');
     }
     return isValidURL;
+}
 }
